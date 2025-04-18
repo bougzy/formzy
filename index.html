@@ -1,211 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Workplace Inspection Checklist</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-    }
-    .checklist-card {
-      background-color: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .section-title {
-      border-left: 5px solid #0d6efd;
-      padding-left: 10px;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-    .form-check-label {
-      font-weight: 500;
-    }
-    .form-check-inline {
-      margin-right: 15px;
-    }
-    .form-section {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #dee2e6;
-    }
-    .btn-primary {
-      padding: 10px 30px;
-      border-radius: 50px;
-    }
-    textarea {
-      resize: none;
-    }
-  </style>
-</head>
-<body>
-  
 
-  
-<div class="container">
-  <h2 class="mb-4 text-center">Forms</h2>
-  <div class="accordion" id="formAccordion">
+    <head>
+        <meta charset="utf-8">
+        <title> Everlast Roofing Solution</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
 
-    <!-- Accordion Item 1 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-          Workplace Inspection Report
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <!-- <p>This form collects contact details.</p> -->
-            <a href="w.html" class="btn btn-primary">Workplace Inspection Report</a>
-          </div>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
         </div>
-      </div>
-    </div>
+        <!-- Spinner End -->
 
-    <!-- Accordion Item 2 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-          Incident Investigation Summary Report
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <!-- <p>Submit your feedback and comments here.</p> -->
-            <a href="tp.html" class="btn btn-primary">Incident Investigation Summary Report</a>
-          </div>
+        
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid header-top">
+            <div class="container d-flex align-items-center">
+                <div class="d-flex align-items-center h-100">
+                    <a href="#" class="navbar-brand" style="height: 125px;">
+                        <img src="img/eve.png"   style="width: 100px; margin-bottom: 30px;"/>
+                        <!-- <h1 class="text-primary mb-0"><i class="fas fa-bolt"></i> Lumaflowenergy</h1> -->
+                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    </a>
+                </div>
+                <div class="w-100 h-100">
+                    <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
+                        <div class="row gx-0 align-items-center">
+                            <div class="col-lg-8 text-center text-lg-center mb-lg-0">
+                                <div class="d-flex flex-wrap">
+                                    <div class="border-end border-primary pe-3">
+                                        <a href="#" class="text-muted small"><i class="fas fa-phone text-primary me-2"></i>+013 445 6281</a>
+                                    </div>
+                                    <div class="ps-3">
+                                        <a href="mailto:example@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>info@lumaflowenergy.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center text-lg-end">
+                                <div class="d-flex justify-content-end">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-bar px-0 py-lg-0" style="height: 80px;">
+                        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
+                            <a href="#" class="navbar-brand-2">
+                                <h1 class="text-primary mb-0"><i class="fas fa-bolt"></i> Electra</h1>
+                                <!-- <img src="img/logo.png" alt="Logo"> -->
+                            </a>  
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <div class="navbar-nav mx-0 mx-lg-auto bg-white">
+                                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                                    <a href="about.html" class="nav-item nav-link">About</a>
+                                    <a href="service.html" class="nav-item nav-link">Service</a>
+                                   
+                                    <div class="nav-item dropdown">
+                                       
+                                       
+                                    </div>
+                                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                    
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+        <!-- Navbar & Hero End -->
 
-    <!-- Accordion Item 3 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-          OHS Project Cost Estimate Worksheet
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <!-- <p>Create your account using the registration form.</p> -->
-            <a href="cost.html" class="btn btn-primary">OHS Project Cost Estimate Worksheet</a>
-          </div>
+        <style>
+            .header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top */
+    background: white; /* Add a background to prevent overlap issues */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+.nav-bar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Ensure content doesn't get hidden behind the navbar */
+body {
+    padding-top: 125px; /* Adjust based on the navbar height */
+}
+
+        </style>
+
+        <!-- Modal Search Start -->
+        
+        <!-- Modal Search End -->
+
+
+
+
+         <!-- Carousel End -->
+        <div class="header-carousel owl-carousel overflow-hidden">
+            <div class="header-carousel-item hero-section">
+                <div class="hero-bg-half-1"></div>
+                <div class="hero-shape-1"></div>
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-4 align-items-center">
+                            <div class=" animated fadeInLeft">
+                                <div class="text-sm-center text-center">
+                                    <h2 class="text-white text-center text-uppercase fw-bold mb-4">Renewable Energy Plant</h2>
+                                    <p class="mb-5 fs-5">
+                                        Harnessing Clean Energy for a Brighter Future
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item hero-section">
+                <div class="hero-bg-half-2"></div>
+                <div class="hero-shape-2"></div>
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-4 align-items-center">
+                            <div class=" animated fadeInLeft">
+                                <div class="text-sm-center">
+                                    <h2 class="text-white text-uppercase fw-bold mb-4">Solar Energy</h2>
+                                   
+                                     <p rclass="mb-5 fs-5">
+                                        Let The Sun Work For Your Home
+                                    </p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="header-carousel-item hero-section">
+                <div class="hero-bg-half-4"></div>
+                <div class="hero-shape-2"></div>
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-4 align-items-center">
+                            <div class=" animated fadeInLeft">
+                                <div class="text-sm-center">
+                                    <h2 class="text-white text-uppercase fw-bold mb-4">Power Plant Generation</h2>
+                                   
+                                     <p rclass="mb-5 fs-5">
+                                        Efficient and Sustainable Energy Production
+                                    </p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item hero-section">
+                <div class="hero-bg-half-4"></div>
+                <div class="hero-shape-2"></div>
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-4 align-items-center">
+                            <div class=" animated fadeInLeft">
+                                <div class="text-sm-center">
+                                    <h2 class="text-white text-uppercase fw-bold mb-4">Telecommunication</h2>
+                                   
+                                     <p rclass="mb-5 fs-5">
+                                        Seamless Connectivity for a Digital World
+                                    </p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
-      </div>
-    </div>
+        <!-- Carousel End -->
 
-    <!-- Repeat similar blocks for Forms 4 to 8 -->
+        <style>
+           
+        </style>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-          Email or Memo Template
-        </button>
-      </h2>
-      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <!-- <p>Access your account using the login form.</p> -->
-            <a href="emailform.html" class="btn btn-primary">Email or Memo Template</a>
-          </div>
-        </div>
-      </div>
+        <!-- Home Page Start -->
+<div class="container-fluid mt-5  text-center" id="home">
+    <div class="container ">
+        <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Welcome to Lumaflow Energy</h6>
+        <h1 class="display-4 mb-3">Innovative, Sustainable, and Efficient Energy Solutions</h1>
+        <p>
+            We are dedicated to reshaping the energy landscape by providing cutting-edge technologies, unparalleled 
+            customer service, and environmentally friendly solutions that empower businesses and households to harness 
+            the power of renewable energy.
+        </p>
+        <p>
+            From solar power installations to energy efficiency consulting, Lumaflow Energy is committed to lighting the 
+            way to a cleaner, brighter future for all.
+        </p>
+        <!-- <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong">Learn More</a> -->
     </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFive">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-          General Procedures Template
-        </button>
-      </h2>
-      <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <!-- <p>Answer a few questions in our survey form.</p> -->
-            <a href="general.html" class="btn btn-primary">General Procedures Template</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingSix">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-          Incident Investigation Summary Report
-        </button>
-      </h2>
-      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <!-- <p>Apply for a job position using this form.</p> -->
-            <a href="incidentform.html" class="btn btn-primary">Incident Investigation Summary Report</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingSeven">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
-          Sample Job Hazard Analysis Form
-        </button>
-      </h2>
-      <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <p></p>
-            <a href="jh.html" class="btn btn-primary">Sample Job Hazard Analysis Form</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingEight">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
-          SAFE WORK PROCEDURE
-        </button>
-      </h2>
-      <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <p></p>
-            <a href="safe.html" class="btn btn-primary">SAFE WORK PROCEDURE</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingNine">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
-          Workplace Inspection Checklist
-        </button>
-      </h2>
-      <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
-        <div class="accordion-body">
-          <div class="card p-3 shadow-sm">
-            <p></p>
-            <a href="work.html" class="btn btn-primary">Workplace Inspection Checklist</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </div>
+<!-- Home Page End -->
 
-  <script>
-    function downloadPDF() {
-      const element = document.getElementById('checklist');
-      html2pdf().from(element).save('Workplace_Inspection_Checklist.pdf');
-    }
-  </script>
-</body>
+
+
+   <!-- About Start -->
+   <div class="container-fluid py-5" id="about">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <img class="img-fluid mb-4 mb-lg-0" src="img/roof3.jpg" alt="About Us">
+            </div>
+            <div class="col-lg-7">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">About Us</h6>
+                <h1 class="display-4 mb-3"><span class="text-primary">25+ Years of Excellence</span></h1>
+                
+                <p>
+                    Lumaflow Energy is a leading provider of innovative and sustainable power solutions, specializing in power plants, power generation, and telecommunication infrastructure. Our mission is to drive progress by ensuring reliable and efficient energy production to support industries, businesses, and communities. With years of expertise in the energy sector, we are committed to delivering cutting-edge technology and infrastructure that meets the growing demand for electricity worldwide.
+                </p>
+                <p>
+                    At Lumaflow Energy, we take pride in developing and operating high-capacity power plants that utilize diverse energy sources, including thermal, hydro, and renewable energy. Our focus is on optimizing energy efficiency and sustainability, ensuring that our power generation solutions are both cost-effective and environmentally friendly.
+                </p>
+                <a href="about.html" class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+       
+             
+
+        <!-- Banner Start -->
+<div class="container-fluid banner py-5 wow zoomIn" data-wow-delay="0.2s">
+    <div class="banner-design-1"></div>
+    <div class="banner-design-2"></div>
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <div class="">
+                    <h4 class="text-white">Contact Us</h4>
+                    <h1 class="display-4 text-white mb-0">Get in Touch for Reliable Energy Solutions</h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center justify-content-lg-end h-100">
+                    <a class="btn btn-primary py-3 px-4 px-md-5 ms-2" href="contact.html">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner End -->
+
+
+       
+
+        <!-- Services Start -->
+<div class="container-fluid service py-5">
+    <div class="container py-5">
+        <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Services</h4>
+            <h1 class="display-4 mb-4">The Best Service For You</h1>
+            <p class="mb-0">We specialize in providing cutting-edge solutions in power generation, solar energy, and telecommunications. Our services ensure efficient, sustainable, and reliable energy and communication solutions tailored to your needs.</p>
+        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0.2s">
+                <ul class="nav">
+                    <li class="nav-item me-lg-0 mb-4">
+                        <a class="py-3 px-5 active" data-bs-toggle="pill" href="#ServiceTab-1">
+                            <span>Commercial</span>
+                        </a>
+                    </li>
+                    <li class="nav-item me-lg-0 mb-4">
+                        <a class="py-3 px-5" data-bs-toggle="pill" href="#ServiceTab-2">
+                            <span>Residential</span>
+                        </a>
+                    </li>
+                    <li class="nav-item me-lg-0 mb-4 mb-lg-0">
+                        <a class="py-3 px-5" data-bs-toggle="pill" href="#ServiceTab-3">
+                            <span>Industrial</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 wow fadeInRight" data-wow-delay="0.3s">
+                <div class="tab-content">
+                    <!-- Commercial Services -->
+                    <div id="ServiceTab-1" class="tab-pane fade show p-0 active">
+                        <div class="service-carousel owl-carousel">
+                            <div class="service-item">
+                                <img src="img/lum9.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Renewable Energy Solutions</h4>
+                                    <p class="mb-4">We design and implement solar power plants and hybrid energy solutions for commercial facilities, reducing costs and environmental impact.</p>
+                                    <a class="btn btn-primary py-2 px-4" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <img src="img/commercial-2.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Grid & Off-Grid Power Systems</h4>
+                                    <p class="mb-4">Our experts provide tailored grid-connected and off-grid power solutions to ensure uninterrupted electricity supply for businesses.</p>
+                                    <a class="btn btn-primary py-2 px-4" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <img src="img/commercial-3.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Telecommunications Infrastructure</h4>
+                                    <p class="mb-4">We deploy and maintain telecom towers, fiber optics, and network infrastructure for seamless connectivity and communication.</p>
+                                    <a class="btn btn-primary py-2 px-4" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Residential Services -->
+                    <div id="ServiceTab-2" class="tab-pane fade show p-0">
+                        <div class="service-carousel owl-carousel">
+                            <div class="service-item">
+                                <img src="img/residential-1.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Solar Panel Installation</h4>
+                                    <p class="mb-4">Harness the sun’s power with our advanced residential solar systems, ensuring sustainable and cost-effective energy solutions.</p>
+                                    <a class="btn btn-primary py-2 px-4" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <img src="img/lum5.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Home Power Backup Solutions</h4>
+                                    <p class="mb-4">From inverters to battery storage systems, we provide power backup solutions to keep your home running during outages.</p>
+                                    <a class="btn btn-primary py-2 px-4" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <img src="img/residential-3.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Smart Home & Connectivity</h4>
+                                    <p class="mb-4">We offer smart energy management systems, security installations, and telecom services to enhance home automation and connectivity.</p>
+                                    <a class="btn btn-primary py-2 px-4" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Industrial Services -->
+                    <div id="ServiceTab-3" class="tab-pane fade show p-0">
+                        <div class="service-carousel owl-carousel">
+                            <div class="service-item">
+                                <img src="img/industrial-1.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Power Plant Development & Maintenance</h4>
+                                    <p class="mb-4">We construct and maintain industrial-scale power plants, ensuring optimized energy production and distribution.</p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <img src="img/industrial-2.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">High-Voltage Electrical Systems</h4>
+                                    <p class="mb-4">Our team specializes in industrial power system design, from substations to high-voltage equipment installation.</p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <img src="img/lum11.jpg" class="img-fluid w-100" alt="">
+                                <div class="border border-top-0 p-4">
+                                    <h4 class="mb-3">Telecom & Data Networks</h4>
+                                    <p class="mb-4">We provide robust communication networks for industries, ensuring fast and reliable data transfer for large-scale operations.</p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+ <style>
+    .service-carousel {
+    display: flex;
+    gap: 15px; /* Reduce spacing between cards */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 100%;
+    max-width: 350px; /* Adjust as needed */
+    height: 500px; /* Ensure uniform height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 0; /* Remove any unnecessary margin */
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images fit within the fixed height */
+}
+
+.service-item .border {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px; /* Reduce padding if needed */
+}
+
+.service-item h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.service-item p {
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.service-item .btn {
+    margin-top: auto;
+}
+
+/* Remove excessive spacing from Owl Carousel */
+.owl-carousel .owl-stage {
+    display: flex;
+    gap: 5px; /* Reduce space between slides */
+}
+
+ </style>
+
+
+
+<div class="container">
+    <h2 class="mb-4 text-center">Forms</h2>
+    <div class="accordion" id="formAccordion">
+
+      <!-- Accordion Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Workplace Inspection Report
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <!-- <p>This form collects contact details.</p> -->
+              <a href="w.html" class="btn btn-primary">Workplace Inspection Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Incident Investigation Summary Report
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <!-- <p>Submit your feedback and comments here.</p> -->
+              <a href="tp.html" class="btn btn-primary">Incident Investigation Summary Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Item 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            OHS Project Cost Estimate Worksheet
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <!-- <p>Create your account using the registration form.</p> -->
+              <a href="cost.html" class="btn btn-primary">OHS Project Cost Estimate Worksheet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat similar blocks for Forms 4 to 8 -->
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            Email or Memo Template
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <!-- <p>Access your account using the login form.</p> -->
+              <a href="emailform.html" class="btn btn-primary">Email or Memo Template</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+            General Procedures Template
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <!-- <p>Answer a few questions in our survey form.</p> -->
+              <a href="general.html" class="btn btn-primary">General Procedures Template</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+            Incident Investigation Summary Report
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <!-- <p>Apply for a job position using this form.</p> -->
+              <a href="incidentform.html" class="btn btn-primary">Incident Investigation Summary Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+            Sample Job Hazard Analysis Form
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <p></p>
+              <a href="jh.html" class="btn btn-primary">Sample Job Hazard Analysis Form</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+            SAFE WORK PROCEDURE
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <p></p>
+              <a href="safe.html" class="btn btn-primary">SAFE WORK PROCEDURE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+            Workplace Inspection Checklist
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="card p-3 shadow-sm">
+              <p></p>
+              <a href="work.html" class="btn btn-primary">Workplace Inspection Checklist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
 </html>
