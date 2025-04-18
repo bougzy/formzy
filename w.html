@@ -1,0 +1,364 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inspection Results Report</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .report-container {
+      background: #fff;
+      padding: 40px;
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+    .table th, .table td {
+      vertical-align: middle;
+    }
+    textarea {
+      resize: none;
+    }
+    .legend-text {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container report-container" id="report">
+  <h2 class="text-center mb-4">Workplace Inspection Report</h2>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <label class="form-label">Inspected By:</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Supervisor Sign-Off:</label>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <label class="form-label">Date of Inspection:</label>
+      <input type="date" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Date Supervisor Received Report:</label>
+      <input type="date" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <label class="form-label">Department:</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Electronic Copies Sent To:</label>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  
+
+  <div class="table-responsive mb-4">
+    <table class="table table-bordered text-center align-middle">
+      <thead class="table-light">
+      <tr>
+        <th>Item #</th>
+        <th>Location</th>
+        <th>Hazard</th>
+        <th>Category</th>
+        <th>Priority (Class)</th>
+        <th>Recommended Action</th>
+        <th>Date Completed</th>
+        <th>Supervisor's Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      ${[...Array(10)].map((_, i) => `
+        <tr>
+          <td>${i + 1}</td>
+          <td><input type="text" class="form-control" placeholder="Location"></td>
+          <td><input type="text" class="form-control" placeholder="Hazard"></td>
+          <td>
+            <select class="form-select">
+              <option selected disabled>Select</option>
+              <option>BIO</option><option>CHM</option><option>CFS</option><option>ENV</option>
+              <option>ENY</option><option>ERG</option><option>FRX</option><option>MEG</option>
+              <option>NOI</option><option>OCP</option><option>PHS</option><option>SFL</option>
+              <option>WAH</option><option>WKV</option><option>OFF</option><option>MMH</option>
+              <option>WKP</option><option>OTH</option>
+            </select>
+          </td>
+          <td>
+            <select class="form-select">
+              <option selected disabled>Choose</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+            </select>
+          </td>
+          <td><textarea class="form-control" rows="2" placeholder="Recommended Action"></textarea></td>
+          <td><input type="date" class="form-control"></td>
+          <td><input type="text" class="form-control" placeholder="Supervisor Name"></td>
+        </tr>
+      `).join('')}
+      </tbody>
+    </table>
+  </div>
+
+ 
+  <div class="mb-4">
+    <label class="form-label">Hazard Observed (Include WSH Act/Section/Regulation):</label>
+    <textarea class="form-control" rows="3"></textarea>
+  </div>
+
+
+  <div class="section-title">Hazard Priority:</div>
+  <p class="legend-text">
+    "A" = Major (Requires Immediate Action) <br>
+    "B" = Serious (Requires Short-term Action) <br>
+    "C" = Minor (Requires Long-term Action)
+  </p>
+
+  <div class="section-title">Hazard Categories:</div>
+  <p class="legend-text">
+    BIO (Biological), CHM (Chemical), CFS (Confined Space Hazard), ENV (Environment), ENY (Energy),
+    ERG (Ergonomic), FRX (Fire/Explosion), MEG (Machine Guarding), NOI (Noise), OCP (Occupational),
+    PHS (Physical), SFL (Slips/Falls), WAH (Working at Heights), WKV (Workplace Violence),
+    OFF (Office), MMH (Manual Material Handling), WKP (Work Practice/Condition), OTH (Other)
+  </p>
+
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary px-4" onclick="downloadPDF()">Download as PDF</button>
+  </div>
+</div>
+
+<script>
+ 
+  document.body.innerHTML = document.body.innerHTML.replace('${[...Array(10)].map((_, i) => `...', '').replace(/`\)\.join\(''\)\}/, '');
+
+  function downloadPDF() {
+    const element = document.getElementById('report');
+    html2pdf().from(element).save('Inspection_Results_Report.pdf');
+  }
+</script>
+</body>
+</html> 
+
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Inspection Results Report</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+   <style>
+     body {
+       background: #f0f2f5;
+     }
+     .report-container {
+       background: #fff;
+       padding: 40px;
+       margin-top: 30px;
+       border-radius: 12px;
+       box-shadow: 0 0 15px rgba(0,0,0,0.1);
+     }
+     h2 {
+       border-bottom: 2px solid #0d6efd;
+       padding-bottom: 10px;
+     }
+     .table th, .table td {
+       vertical-align: middle;
+     }
+     textarea {
+       resize: none;
+     }
+     .legend-text {
+       font-size: 0.9rem;
+       color: #555;
+       font-style: italic;
+     }
+     .section-title {
+       font-size: 1rem;
+       font-weight: 600;
+       margin-top: 2rem;
+       color: #0d6efd;
+     }
+   </style>
+ </head>
+ <body>
+ 
+ <div class="container report-container" id="report">
+   <form class="needs-validation" novalidate>
+     <h2 class="text-center mb-4">Workplace Inspection Report</h2>
+ 
+     <div class="row mb-4">
+       <div class="col-md-6">
+         <label class="form-label">Inspected By:</label>
+         <input type="text" class="form-control" required>
+       </div>
+       <div class="col-md-6">
+         <label class="form-label">Supervisor Sign-Off:</label>
+         <input type="text" class="form-control" required>
+       </div>
+     </div>
+ 
+     <div class="row mb-4">
+       <div class="col-md-6">
+         <label class="form-label">Date of Inspection:</label>
+         <input type="date" class="form-control" required>
+       </div>
+       <div class="col-md-6">
+         <label class="form-label">Date Supervisor Received Report:</label>
+         <input type="date" class="form-control" required>
+       </div>
+     </div>
+ 
+     <div class="row mb-4">
+       <div class="col-md-6">
+         <label class="form-label">Department:</label>
+         <input type="text" class="form-control" required>
+       </div>
+       <div class="col-md-6">
+         <label class="form-label">Electronic Copies Sent To:</label>
+         <input type="text" class="form-control" required>
+       </div>
+     </div>
+ 
+     <div class="table-responsive mb-4">
+       <table class="table table-bordered text-center align-middle" id="inspectionTable">
+         <thead class="table-light">
+           <tr>
+             <th>Item #</th>
+             <th>Location</th>
+             <th>Hazard</th>
+             <th>Category</th>
+             <th>Priority (Class)</th>
+             <th>Recommended Action</th>
+             <th>Date Completed</th>
+             <th>Supervisor's Name</th>
+           </tr>
+         </thead>
+         <tbody id="inspectionBody">
+           <!-- Rows will be inserted here -->
+         </tbody>
+       </table>
+       <div class="text-end">
+         <button type="button" class="btn btn-secondary btn-sm" onclick="addRow()">+ Add Row</button>
+       </div>
+     </div>
+ 
+     <div class="mb-4">
+       <label class="form-label">Hazard Observed (Include WSH Act/Section/Regulation):</label>
+       <textarea class="form-control" rows="3" required></textarea>
+     </div>
+ 
+     <div class="section-title">Hazard Priority:</div>
+     <p class="legend-text">
+       "A" = Major (Requires Immediate Action) <br>
+       "B" = Serious (Requires Short-term Action) <br>
+       "C" = Minor (Requires Long-term Action)
+     </p>
+ 
+     <div class="section-title">Hazard Categories:</div>
+     <p class="legend-text">
+       BIO (Biological), CHM (Chemical), CFS (Confined Space Hazard), ENV (Environment), ENY (Energy),
+       ERG (Ergonomic), FRX (Fire/Explosion), MEG (Machine Guarding), NOI (Noise), OCP (Occupational),
+       PHS (Physical), SFL (Slips/Falls), WAH (Working at Heights), WKV (Workplace Violence),
+       OFF (Office), MMH (Manual Material Handling), WKP (Work Practice/Condition), OTH (Other)
+     </p>
+ 
+     <div class="text-center mt-4">
+       <button type="submit" class="btn btn-success px-4">Submit</button>
+       <button type="button" class="btn btn-primary px-4 ms-2" onclick="downloadPDF()">Download as PDF</button>
+     </div>
+   </form>
+ </div>
+ 
+ <script>
+   let rowCount = 0;
+ 
+   function addRow() {
+     rowCount++;
+     const tbody = document.getElementById('inspectionBody');
+     const row = document.createElement('tr');
+     row.innerHTML = `
+       <td>${rowCount}</td>
+       <td><input type="text" class="form-control" required></td>
+       <td><input type="text" class="form-control" required></td>
+       <td>
+         <select class="form-select" required>
+           <option value="" disabled selected>Select</option>
+           <option>BIO</option><option>CHM</option><option>CFS</option><option>ENV</option>
+           <option>ENY</option><option>ERG</option><option>FRX</option><option>MEG</option>
+           <option>NOI</option><option>OCP</option><option>PHS</option><option>SFL</option>
+           <option>WAH</option><option>WKV</option><option>OFF</option><option>MMH</option>
+           <option>WKP</option><option>OTH</option>
+         </select>
+       </td>
+       <td>
+         <select class="form-select" required>
+           <option value="" disabled selected>Choose</option>
+           <option>A</option>
+           <option>B</option>
+           <option>C</option>
+         </select>
+       </td>
+       <td><textarea class="form-control" rows="2" required></textarea></td>
+       <td><input type="date" class="form-control" required></td>
+       <td><input type="text" class="form-control" required></td>
+     `;
+     tbody.appendChild(row);
+   }
+ 
+   // Add default 10 rows
+   for (let i = 0; i < 10; i++) addRow();
+ 
+   function downloadPDF() {
+     const element = document.getElementById('report');
+     html2pdf().from(element).save('Inspection_Results_Report.pdf');
+   }
+ 
+   // Bootstrap form validation
+   (() => {
+     'use strict';
+     const forms = document.querySelectorAll('.needs-validation');
+     Array.from(forms).forEach(form => {
+       form.addEventListener('submit', event => {
+         if (!form.checkValidity()) {
+           event.preventDefault();
+           event.stopPropagation();
+         }
+         form.classList.add('was-validated');
+       }, false);
+     });
+   })();
+ </script>
+ 
+ </body>
+ </html>
+ 

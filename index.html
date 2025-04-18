@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workplace Inspection Checklist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .checklist-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      border-left: 5px solid #0d6efd;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .form-check-label {
+      font-weight: 500;
+    }
+    .form-check-inline {
+      margin-right: 15px;
+    }
+    .form-section {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #dee2e6;
+    }
+    .btn-primary {
+      padding: 10px 30px;
+      border-radius: 50px;
+    }
+    textarea {
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="checklist-card" id="checklist">
+      <h2 class="text-center mb-4">Workplace Inspection Checklist</h2>
+
+      <!-- Sample Section: Entrances and Exits -->
+      <div class="form-section">
+        <h5 class="section-title">Entrances and Exits</h5>
+
+        <div class="mb-3">
+          <label class="form-label">Are entrances and exits to and from work areas free from obstructions?</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="obstruction" value="Yes" id="obstructionYes">
+              <label class="form-check-label" for="obstructionYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="obstruction" value="No" id="obstructionNo">
+              <label class="form-check-label" for="obstructionNo">No</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="obstruction" value="N/A" id="obstructionNA">
+              <label class="form-check-label" for="obstructionNA">N/A</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Are exit doors clearly marked?</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="marked_exits" value="Yes" id="markedYes">
+              <label class="form-check-label" for="markedYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="marked_exits" value="No" id="markedNo">
+              <label class="form-check-label" for="markedNo">No</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="marked_exits" value="N/A" id="markedNA">
+              <label class="form-check-label" for="markedNA">N/A</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional Comment Section -->
+      <div class="form-section">
+        <label for="comment" class="form-label">Additional Comments</label>
+        <textarea class="form-control" id="comment" rows="4" placeholder="Add any notes or concerns here..."></textarea>
+      </div>
+
+      <!-- Download PDF Button -->
+      <div class="text-center">
+        <button class="btn btn-primary" onclick="downloadPDF()">Download as PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('checklist');
+      html2pdf().from(element).save('Workplace_Inspection_Checklist.pdf');
+    }
+  </script>
+</body>
+</html>

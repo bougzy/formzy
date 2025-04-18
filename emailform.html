@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email or Memo Template</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .form-section {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #0d6efd;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .btn-primary {
+      border-radius: 25px;
+      padding: 10px 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="form-content">
+    <h2 class="text-center mb-4">Email or Memo Template</h2>
+
+    <div class="form-section">
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-control" />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">To</label>
+          <input type="text" class="form-control" placeholder="Recipient name or title" />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">From</label>
+          <input type="text" class="form-control" placeholder="Your name or title" />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Subject</label>
+          <input type="text" class="form-control" placeholder="Brief subject" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label class="form-label">Salutation</label>
+      <input type="text" class="form-control mb-3" placeholder="e.g., Dear Team," />
+
+      <label class="form-label">Introduction</label>
+      <textarea class="form-control mb-3" rows="2" placeholder="Explain why you are writing this email"></textarea>
+
+      <label class="form-label">Issues / Concerns</label>
+      <textarea class="form-control mb-3" rows="2" placeholder="Describe any issues or concerns"></textarea>
+
+      <label class="form-label">Hazards Relative to the Issues/Concerns</label>
+      <textarea class="form-control mb-3" rows="2" placeholder="List relevant hazards"></textarea>
+
+      <label class="form-label">Legislative Requirements</label>
+      <textarea class="form-control mb-3" rows="2" placeholder="Mention any laws, policies, or standards"></textarea>
+
+      <label class="form-label">Recommendations / Alternative Solutions</label>
+      <textarea class="form-control mb-3" rows="2" placeholder="Offer potential solutions or options"></textarea>
+
+      <label class="form-label">Recommended Management or Employee Actions</label>
+      <textarea class="form-control mb-3" rows="2" placeholder="List suggested actions for specific roles"></textarea>
+
+      <label class="form-label">Consequences if Not Corrected</label>
+      <textarea class="form-control mb-3" rows="2" placeholder="Explain what could happen if issues persist"></textarea>
+
+      <label class="form-label">Closing Remarks</label>
+      <textarea class="form-control" rows="2" placeholder="Encourage action or offer support"></textarea>
+    </div>
+
+    <div class="text-center mb-5">
+      <button class="btn btn-primary" onclick="downloadPDF()">Download as PDF</button>
+    </div>
+  </div>
+
+  <!-- PDF generation script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      html2pdf().from(document.getElementById("form-content")).set({
+        margin: 0.5,
+        filename: 'Email_or_Memo_Template.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      }).save();
+    }
+  </script>
+</body>
+</html>
