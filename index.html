@@ -43,63 +43,163 @@
   </style>
 </head>
 <body>
-  <div class="container my-5">
-    <div class="checklist-card" id="checklist">
-      <h2 class="text-center mb-4">Workplace Inspection Checklist</h2>
+  
 
-      <!-- Sample Section: Entrances and Exits -->
-      <div class="form-section">
-        <h5 class="section-title">Entrances and Exits</h5>
+  
+<div class="container">
+  <h2 class="mb-4 text-center">Forms</h2>
+  <div class="accordion" id="formAccordion">
 
-        <div class="mb-3">
-          <label class="form-label">Are entrances and exits to and from work areas free from obstructions?</label>
-          <div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="obstruction" value="Yes" id="obstructionYes">
-              <label class="form-check-label" for="obstructionYes">Yes</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="obstruction" value="No" id="obstructionNo">
-              <label class="form-check-label" for="obstructionNo">No</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="obstruction" value="N/A" id="obstructionNA">
-              <label class="form-check-label" for="obstructionNA">N/A</label>
-            </div>
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          Workplace Inspection Report
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <!-- <p>This form collects contact details.</p> -->
+            <a href="w.html" class="btn btn-primary">Workplace Inspection Report</a>
           </div>
         </div>
-
-        <div class="mb-3">
-          <label class="form-label">Are exit doors clearly marked?</label>
-          <div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="marked_exits" value="Yes" id="markedYes">
-              <label class="form-check-label" for="markedYes">Yes</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="marked_exits" value="No" id="markedNo">
-              <label class="form-check-label" for="markedNo">No</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="marked_exits" value="N/A" id="markedNA">
-              <label class="form-check-label" for="markedNA">N/A</label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Optional Comment Section -->
-      <div class="form-section">
-        <label for="comment" class="form-label">Additional Comments</label>
-        <textarea class="form-control" id="comment" rows="4" placeholder="Add any notes or concerns here..."></textarea>
-      </div>
-
-      <!-- Download PDF Button -->
-      <div class="text-center">
-        <button class="btn btn-primary" onclick="downloadPDF()">Download as PDF</button>
       </div>
     </div>
+
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          Incident Investigation Summary Report
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <!-- <p>Submit your feedback and comments here.</p> -->
+            <a href="tp.html" class="btn btn-primary">Incident Investigation Summary Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion Item 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+          OHS Project Cost Estimate Worksheet
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <!-- <p>Create your account using the registration form.</p> -->
+            <a href="cost.html" class="btn btn-primary">OHS Project Cost Estimate Worksheet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat similar blocks for Forms 4 to 8 -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+          Email or Memo Template
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <!-- <p>Access your account using the login form.</p> -->
+            <a href="emailform.html" class="btn btn-primary">Email or Memo Template</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+          General Procedures Template
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <!-- <p>Answer a few questions in our survey form.</p> -->
+            <a href="general.html" class="btn btn-primary">General Procedures Template</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+          Incident Investigation Summary Report
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <!-- <p>Apply for a job position using this form.</p> -->
+            <a href="incidentform.html" class="btn btn-primary">Incident Investigation Summary Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSeven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+          Sample Job Hazard Analysis Form
+        </button>
+      </h2>
+      <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <p></p>
+            <a href="jh.html" class="btn btn-primary">Sample Job Hazard Analysis Form</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEight">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+          SAFE WORK PROCEDURE
+        </button>
+      </h2>
+      <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <p></p>
+            <a href="safe.html" class="btn btn-primary">SAFE WORK PROCEDURE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+          Workplace Inspection Checklist
+        </button>
+      </h2>
+      <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+        <div class="accordion-body">
+          <div class="card p-3 shadow-sm">
+            <p></p>
+            <a href="work.html" class="btn btn-primary">Workplace Inspection Checklist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
 
   <script>
     function downloadPDF() {
